@@ -60,8 +60,8 @@ combo_##NAME { \
 
         combo_enter { \
             timeout-ms = <50>; \
-            bindings = &kp ENTER; \
-            key-positions = 21 23; \
+            bindings = <&kp ENTER;> \
+            key-positions = <21 23>; \
         };
         COMBO(esc, &kp ESC, 19 20)
 
