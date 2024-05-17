@@ -34,7 +34,7 @@
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
 combo_##NAME { \
-    timeout-ms = <20>; \
+    timeout-ms = <50>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
 };
@@ -58,7 +58,11 @@ combo_##NAME { \
 
         //        COMBO(enter, &kp ENTER, 21 22 23)
 
-        COMBO(enter, &kp ENTER, 21 23)
+        combo_enter { 
+            timeout-ms = <50>; 
+            bindings = &kp ENTER; 
+            key-positions = 21 23; 
+        };
         COMBO(esc, &kp ESC, 19 20)
 
         /* parentheticals */
