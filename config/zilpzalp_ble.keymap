@@ -58,11 +58,22 @@ combo_##NAME { \
 
         //        COMBO(enter, &kp ENTER, 21 22 23)
 
-        combo_enter { \
-            timeout-ms = <50>; \
-            bindings = <&kp ENTER;> \
-            key-positions = <21 23>; \
+        combo_enter {
+            timeout-ms = <50>;
+            bindings = <&kp ENTER;>;
+            key-positions = <21 15>;
         };
+
+        backspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <10 11>;
+        };
+
+        ctrlbksp {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <14 15>;
+        };
+
         COMBO(esc, &kp ESC, 19 20)
 
         /* parentheticals */
@@ -233,10 +244,10 @@ combo_##NAME { \
         numbers {
             label = "NUM";
             bindings = <
-             &kp F       &kp E       &kp D        &kp ASTERISK    &kp PLUS   &kp N7  &kp N8  &kp N9
-&hl LCTRL x  &hl LALT C  &hl LGUI B  &hl LSHFT A  &hl RALT SLASH  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
-             &kp N9      &kp N8      &kp N7                                  &kp N1  &kp N2  &kp N3
-                                     &trans       &trans          &kp E      &kp N0
+                &kp F       &kp E        &kp D        &kp ASTERISK    &kp PLUS   &kp N7  &kp N8  &kp N9
+&hl LEFT_GUI x  &hl LALT C  &hl LCTRL B  &hl LSHFT A  &hl RALT SLASH  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
+                &kp N9      &kp N8       &kp N7                                  &kp N1  &kp N2  &kp N3
+                                         &trans       &trans          &kp E      &kp N0
             >;
         };
 
