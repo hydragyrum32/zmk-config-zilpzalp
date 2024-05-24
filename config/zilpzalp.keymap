@@ -44,7 +44,7 @@ combo_##NAME { \
         compatible = "zmk,combos";
 
         /* usually on base layer */
-        //COMBO(enter, &kp ENTER, 21 15)
+        COMBO(enter, &kp ENTER, 21 15)
         //COMBO(backspc, &kp BACKSPACE, 10 11)
         //COMBO(ctrlbksp, &kp LC(BACKSPACE), 14 15)
 
