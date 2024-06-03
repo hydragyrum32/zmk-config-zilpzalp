@@ -78,13 +78,7 @@
         COMBO(capslock, &kp CAPSLOCK, 0 7)
 
         /* deletion */
-        combo_bspc { 
-            timeout-ms = <50>; 
-            bindings = <&kp BSPC>; 
-            key-positions = <10 11>;
-            require-prior-idle-ms = <80>;
-        };
-        //COMBO(bspc, &kp BSPC, 10 11)
+        COMBO(bspc, &kp BSPC, 10 11)
         COMBO(del, &kp DEL, 6 7)
         COMBO(delword, &kp LC(BSPC), 14 15)
 
