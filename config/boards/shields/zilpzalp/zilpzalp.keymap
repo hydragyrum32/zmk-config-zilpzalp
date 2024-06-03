@@ -41,11 +41,11 @@
 
         /* usually on base layer */
 
-        //COMBO(enter, &kp ENTER, 21 15)
+        COMBO(enter, &kp ENTER, 21 15)
 
         //COMBO(backspc, &kp BACKSPACE, 10 11)
-
         //COMBO(ctrlbksp, &kp LC(BACKSPACE), 14 15)
+
         COMBO(q, &kp Q, 1 2)
         COMBO(z, &kp Z, 18 19)
         COMBO(v, &kp V, 0 1)
@@ -58,7 +58,6 @@
         COMBO(dash, &kp MINUS, 21 22)
 
         //        COMBO(enter, &kp ENTER, 21 22 23)
-
 
         COMBO(esc, &kp ESC, 19 20)
 
@@ -90,7 +89,7 @@
         COMBO(delword, &kp LC(BSPC), 14 15)
 
         /* alternative shifting */
-/*
+        /*
         COMBO(Sq, &kp LS(Q), 1 2 25)
         COMBO(Sz, &kp LS(Z), 18 19 25)
         COMBO(Sv, &kp LS(V), 0 1 25)
@@ -225,10 +224,10 @@
         aptmak {
             label = "APT";
             bindings = <
-                &kp W       &kp F        &kp P           &kp B             &kp J         &kp L           &kp U        &kp Y
-&hl LCTRL LGUI  &hl LALT S  &hl LCTRL T  &hl LSHFT H     &hl RALT K        &hr RALT X    &hr RSHFT N     &hr RCTRL A  &hr LALT I  &hr RGUI O
-                &kp C       &kp G        &kp D                                           &kp M           &comsem      &dotcol
-                                         &my_lt NUM SQT  &my_lt NAV SPACE  &my_lt SYM E  &my_lt FUN TAB
+            &kp W       &kp F        &kp P           &kp B             &kp J         &kp L           &kp U        &kp Y
+&hl LGUI R  &hl LALT S  &hl LCTRL T  &hl LSHFT H     &hl RALT K        &hr RALT X    &hr RSHFT N     &hr RCTRL A  &hr LALT I  &hr RGUI O
+            &kp C       &kp G        &kp D                                           &kp M           &comsem      &dotcol
+                                     &my_lt NUM SQT  &my_lt NAV SPACE  &my_lt SYM E  &my_lt FUN TAB
             >;
         };
 
@@ -236,7 +235,7 @@
             label = "NUM";
             bindings = <
                 &kp F       &kp E        &kp D        &kp ASTERISK    &kp PLUS   &kp N7  &kp N8  &kp N9
-&hl LEFT_GUI x  &hl LALT C  &hl LCTRL B  &hl LSHFT A  &hl RALT SLASH  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
+&hl LEFT_GUI X  &hl LALT C  &hl LCTRL B  &hl LSHFT A  &hl RALT SLASH  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT
                 &kp N9      &kp N8       &kp N7                                  &kp N1  &kp N2  &kp N3
                                          &trans       &trans          &kp E      &kp N0
             >;
@@ -267,7 +266,7 @@
             bindings = <
              &bootloader  &trans   &bt BT_CLR    &bt BT_PRV  &kp F12  &kp F7  &kp F8  &kp F9
 &bootloader  &kp F12      &kp F11  &kp F10       &bt BT_NXT  &kp F11  &kp F4  &kp F5  &kp F6  &kp F10
-             &kp F9       &kp F8   &kp F7                             &kp F1  &kp F2  &kp F3
+             &kp F9       &kp F8   &kp F14                            &kp F1  &kp F2  &kp F3
                                    &out OUT_TOG  &trans      &trans   &trans
             >;
         };
