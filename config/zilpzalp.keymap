@@ -33,18 +33,16 @@
 };
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
-combo_##NAME { \
-    timeout-ms = <50>; \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-};
+
 
 / {
     combos {
         compatible = "zmk,combos";
 
         /* usually on base layer */
+
         COMBO(enter, &kp ENTER, 21 15)
+
         //COMBO(backspc, &kp BACKSPACE, 10 11)
         //COMBO(ctrlbksp, &kp LC(BACKSPACE), 14 15)
 
@@ -80,8 +78,13 @@ combo_##NAME { \
         COMBO(capslock, &kp CAPSLOCK, 0 7)
 
         /* deletion */
-
-        COMBO(bspc, &kp BSPC, 10 11)
+        combo_bspc { 
+            timeout-ms = <50>; 
+            bindings = <&kp BSPC>; 
+            key-positions = <10 11>;
+            require-prior-idle-ms = 80;
+        };
+        //COMBO(bspc, &kp BSPC, 10 11)
         COMBO(del, &kp DEL, 6 7)
         COMBO(delword, &kp LC(BSPC), 14 15)
 
@@ -263,7 +266,7 @@ combo_##NAME { \
             bindings = <
              &bootloader  &trans   &bt BT_CLR    &bt BT_PRV  &kp F12  &kp F7  &kp F8  &kp F9
 &bootloader  &kp F12      &kp F11  &kp F10       &bt BT_NXT  &kp F11  &kp F4  &kp F5  &kp F6  &kp F10
-             &kp F9       &kp F8   &kp F7                             &kp F1  &kp F2  &kp F3
+             &kp F9       &kp F8   &kp F14                            &kp F1  &kp F2  &kp F3
                                    &out OUT_TOG  &trans      &trans   &trans
             >;
         };
