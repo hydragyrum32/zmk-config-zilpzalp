@@ -58,7 +58,9 @@ combo_##NAME { \
         COMBO(_oe, &kp RA(O), 17 27)
         COMBO(_ue, &kp RA(U), 6 27)
         COMBO(_sz, &kp RA(S), 9 24)
+
         //COMBO(sch, &macro_sch, 0 2)
+
         COMBO(slash, &kp SLASH, 22 23)
         COMBO(dash, &kp MINUS, 21 22)
 
@@ -83,6 +85,7 @@ combo_##NAME { \
         COMBO(capslock, &kp CAPSLOCK, 0 7)
 
         /* deletion */
+
         COMBO(bspc, &kp BSPC, 10 11)
         COMBO(del, &kp DEL, 6 7)
         COMBO(delword, &kp LC(BSPC), 14 15)
@@ -148,9 +151,10 @@ combo_##NAME { \
 
             hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 21 22 23 24 25 26 27>;
         };
+
         hlh: homerow_mods_lefth {
             compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods left";
+            label = "homerow mods lefth";
             #binding-cells = <2>;
 
             // flavor = "tap-preferred";
@@ -243,7 +247,7 @@ combo_##NAME { \
             label = "APT";
             bindings = <
             &kp W       &kp F        &kp H           &kp B             &kp P         &kp L           &kp U        &kp Y
-&hl LGUI R  &hl LALT S  &hl LCTRL T  &hlh LSHFT H &hl RALT K   &hr RALT X    &hr RSHFT N     &hr RCTRL A  &hr LALT I  &hr RGUI O
+&hl LGUI R  &hl LALT S  &hl LCTRL T  &hlh LSHFT H    &hl RALT K        &hr RALT X    &hr RSHFT N     &hr RCTRL A  &hr LALT I  &hr RGUI O
             &kp C       &kp G        &kp D                                           &kp M           &comsem      &dotcol
                                      &my_lt NUM SQT  &my_lt NAV SPACE  &my_lt SYM E  &my_lt FUN TAB
             >;
