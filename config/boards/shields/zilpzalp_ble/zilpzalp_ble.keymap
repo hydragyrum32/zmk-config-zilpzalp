@@ -20,7 +20,7 @@
         macro_th: macro_th {
             label = "Macro_th";
             compatible = "zmk,behavior-macro-one-param";
-            binding-cells = <1>;
+            #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
                 <&kp S>,
