@@ -53,7 +53,7 @@ combo_##NAME { \
         COMBO(q, &kp Q, 1 2)
         COMBO(z, &kp Z, 18 19)
         COMBO(v, &kp V, 0 1)
-	COMBO(j, &kp J, 5 6)
+	//COMBO(j, &kp J, 5 6)
         COMBO(_ae, &kp RA(A), 15 27)
         COMBO(_oe, &kp RA(O), 17 27)
         COMBO(_ue, &kp RA(U), 6 27)
